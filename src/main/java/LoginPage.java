@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -12,6 +13,10 @@ public class LoginPage {
 
     public void navigateToAUrl(String url){
         webDriver.get(url);
+    }
+    
+    public void navigateToBaset(){
+    	webDriver.findElement(By.id("basket_bttn")).click();
     }
 
 

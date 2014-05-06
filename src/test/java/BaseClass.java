@@ -28,7 +28,12 @@ public class  BaseClass {
 
     @Then("^I am on yahoo page$")
     public void I_am_on_yahoo_page() throws Throwable {
-        loginPage.navigateToAUrl("http://yahoo.co.uk");
+        loginPage.navigateToAUrl("http://currys.co.uk");
+    }
+    
+    @Then("^click on basket link$")
+    public void I_am_on_sports_page() throws Throwable {
+        loginPage.navigateToBaset();
     }
 }
 
