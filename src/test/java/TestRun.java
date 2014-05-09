@@ -8,6 +8,6 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(monochrome = true,tags = {"@reg"})
+@CucumberOptions(monochrome = true,tags = {"@goud,@sri","~@wip"})
 public class TestRun {
 }
