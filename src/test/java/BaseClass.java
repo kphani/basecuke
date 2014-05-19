@@ -22,8 +22,10 @@ public class  BaseClass {
         this.driver = new FirefoxDriver();
         loginPage = new LoginPage(driver);
         
+
     }
     
+
     @Given("^I am on the Google page$")
     public void i_am_on_the_Google_page() {
         loginPage.navigateToAUrl("http://www.google.co.uk");
@@ -40,17 +42,17 @@ public class  BaseClass {
     }
     
     
-//    @Given("^I am on my currys home page$")
-//    public void i_am_on_my_currys_homepage(){
-//    	loginPage.openBrowser("https://secure.currys.co.uk/gbuk/s/authentication.html");
-//
-//
-//    }
+    @Given("^I am on main home page$")
+    public void i_am_on_currys_homepage(){
+    	loginPage.openBrowser("https://secure.currys.co.uk/gbuk/s/authentication.html");
+    	
+    	
+    }
     @When("^I enter (.*) and (.*)$")
     public void enter_username_password(String username,String password){
     	loginPage.inputField(username, password);
-
-
+    	
+    	
     }
     @And("^I click on sign in button$")
     public void i_click_signin_button(){
@@ -60,32 +62,29 @@ public class  BaseClass {
     @Then("^I should login successfully$")
     public void i_should_login_successfully(){
     	
-    	Assert.assertEquals("My Account - Home | Currys", driver.getTitle());
+    	Assert.assertEquals(driver.getTitle(), "My Account - Home | Currys");
     	
     }
     @Given("^I am on currys home page$")
     public void i_navigate_homepage(){
-
-    loginPage.homePage("https://secure.currys.co.uk/gbuk/s/authentication.html");
-
+    	
+    	loginPage.homePage("https://secure.currys.co.uk/gbuk/s/authentication.html");
+    	
     }
-//    @When("^I enter(.*) and (.*)$")
-//    public void password(String username,String password){
-//        loginPage.i_enter_username_password(username, password);
-//
-//    }
+    @When("^I enter(.*) and (.*)$")
+    public void password(String username,String password){
+    	loginPage.i_enter_username_password(username, password);
+    	
+    }
     @And("^ I click on sign in button$")
-    public void sign_in_button(){
-        loginPage.signinbuttonclick();
-
+    public void signinbutton(){
+    	loginPage.signinbuttonclick();
+    	
     }
     public void i_should_be_in_loginpage(){
-
+    	
     }
-
-    @Then("^I should be in currys login page$")
-    public void I_should_be_in_currys_login_page() throws Throwable {
-
-    }
+    	
+    
 }
 

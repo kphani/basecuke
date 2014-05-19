@@ -1,13 +1,12 @@
-/**
- * Created by kphani on 09/04/2014.
- */
-
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
+
+
 @RunWith(Cucumber.class)
-@CucumberOptions(monochrome = true,tags = {"@goud,@sri",})
-public class TestRun {
+@CucumberOptions(monochrome = true,tags = {"@sports"})
+public class MyRunnerTest {
+
 }

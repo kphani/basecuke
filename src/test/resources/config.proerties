@@ -1,0 +1,4 @@
+ envirnoment= production
+ testsite=http://www.visionexpress.co.uk
+ browser=mozilla
+ testsite2=http://www.sportsdirect.com
