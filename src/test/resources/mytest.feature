@@ -1,48 +1,35 @@
-
 @my
 Feature: my test
 
-Scenario: login test
+#  Scenario: login test
+#
+#    Given I m on main page
+#    When  i click on account link
+#    When enter selenium1986@gmail.com and selenium1986
+#    And I click signin button
+#    Then I should log in successfully
 
-Given I m on main page
-When  i click on account link
-When enter selenium1986@gmail.com and selenium1986
-And I click signin button
-Then I should log in successfully
+#@glass
+#
+#Scenario : glasses link
+#
+#Given I m logged in user
+#When I click on glasses link
+#And I click on desiner link
+#Then page with desiner names should dispaly
+#When  I click hugo boss page image
+#Then popular hugo boss glasses page should load
 
-@glass
-
-Scenario : glasses link
-
-Given I m logged in user
-When I click on glasses link
-And I click on desiner link
-Then page with desiner names should dispaly
-When  I click hugo boss page image
-Then popular hugo boss glasses page should load
-
-@sports
-
-Scenario : sportsdirect login test
-
-Given I m on sportsdirect page
-When  I click on sign in button
-When I click on new customer  continue button
-And enter my selenium1986@gmail.com
-And retype my selenium1986@gmail.com
-And select Mr from dropdownlist
-And enter my srini 
-And enter my vas
-And enter my 05/06/1980
-And enter my 89
-And enter my altmore avenue
-And enter my east ham
-And enter my e62bx
-And enter my 9848603090
-And enter my selenium1986
-And confirm enter my selenium1986
-Then I click on register button
-Then I should successfully register
+  @sports
+  Scenario:sportsdirect login test
+    Given I m on sports direct page
+    When  I click on sign in button
+    When I click on new customer  continue button
+    And user entered below details to register as new user
+      | email                  | confEmail | title | firstName | lastName | dob      | mobile    | doorName | streetName     | city   | postCode | pwd          | cPwd         | validationMsg |
+      | selenium1986@gmail.com |           | Mr    | vas       | sri      | 05/06/80 | 984806030 | 89       | altmore avenue | london | e6 2bx   | selenium1986 | selenium1986 |               |
+      | selenium1986@gmail.com | sds          | Mr    | vas       | sri      | 05/06/80 | 984806030 | 89       | altmore avenue | london | e6 2bx   | selenium1986 | selenium1986 |               |
+#    Then I should successfully register
 
 
 

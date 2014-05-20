@@ -12,6 +12,7 @@ public class Page {
 	public WebDriver driver;
 	public Properties config;
 	public Properties or;
+	public RegistrationPage reg;
 	
 	public Page(WebDriver driver){
 		
@@ -69,8 +70,8 @@ public class Page {
     	public void signInButtonForSportsDirect(){
     		driver.findElement(By.cssSelector("a[id='dnn_dnnLOGIN_loginLink']")).click();
     	}
-    	public void clickNewCustomer(){
-    		driver.findElement(By.cssSelector("a[class='dnnPrimaryAction']")).click();
+    	public void clickContinue(){
+    		driver.findElement(By.linkText("CONTINUE")).click();
     	}
     	public void enterEmailId(String email){
     		driver.findElement(By.cssSelector("input[id='dnn_ctr29896_View_txtEmailAddress']")).sendKeys(email);

@@ -54,11 +54,7 @@ public class  BaseClass {
     	
     	
     }
-    @And("^I click on sign in button$")
-    public void i_click_signin_button(){
-    	loginPage.click();
-    	
-    }
+
     @Then("^I should login successfully$")
     public void i_should_login_successfully(){
     	
