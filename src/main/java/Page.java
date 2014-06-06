@@ -1,5 +1,6 @@
 
 import java.io.FileInputStream;
+import java.util.Collections;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -9,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 
 
 public class Page {
-	public WebDriver driver;
+   public WebDriver driver;
 	public Properties config;
 	public Properties or;
 	public RegistrationPage reg;
@@ -123,5 +124,6 @@ public class Page {
     	}
     	public void clickRegisterButton(){
     		driver.findElement(By.cssSelector("a[id='dnn_ctr29896_View_cmdRegister']")).click();
+
     	}
 }
